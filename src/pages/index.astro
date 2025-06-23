@@ -1,8 +1,11 @@
 ---
 import "../styles/global.css";
-import Header from "../components/Header.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Badge from '../components/Badge.astro';
+
+import SocialPill from "../components/SocialPill.astro";
+import Linkedin from "../icons/Linkedin.astro";
+import Github from "../icons/Github.astro";
 ---
 
 
@@ -21,7 +24,21 @@ import Badge from '../components/Badge.astro';
 					<Badge>Disponible para trabajar</Badge>
 				</a>
 			</h1>
-			<h2 class="text-1xl opacity-90">Desarrollador Web con más de 15 años de experiencia en el desarrollo web. De Venezuela. </h2>
+			<h2 class="text-1xl opacity-90 text-wrap">Desarrollador Web con <span class="text-yellow-100/90">más de 15 años de experiencia</span> en el desarrollo de aplicaciones. De Venezuela. </h2>
+
+			<ul>
+				<li>
+					<SocialPill>
+						<Linkedin />Linkedin
+					</SocialPill>
+				</li>
+				<li>
+					<SocialPill>
+						<Github />Github
+					</SocialPill>
+
+				</li>
+			</ul>
 		</main>
 	</section>
 </MainLayout>
