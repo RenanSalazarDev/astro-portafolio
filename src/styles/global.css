@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+
+html {
+    font-family: 'Onest Variable', sans-serif;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #050505;
+}
+
+:root{
+    color-scheme: light dark;
+}
