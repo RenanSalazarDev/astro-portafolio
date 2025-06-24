@@ -4,14 +4,17 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Badge from '../components/Badge.astro';
 
 import SocialPill from "../components/SocialPill.astro";
-import Linkedin from "../icons/Linkedin.astro";
-import Github from "../icons/Github.astro";
+import LinkedinIcon from "../icons/Linkedin.astro";
+import GithubIcon from "../icons/Github.astro";
+import EmailIcon from "../icons/Email.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import BriefinIcon from "../icons/Brief.astro";
 ---
 
 
-<MainLayout>
-	<section class="w-full lg:w-[740px] mx-auto py-44 
-	">
+<MainLayout title="Portafolio de renan Salazar - Desarrollador y Programador web con 15 años de experiancia" description="Contrata a Renan Salazar, un desarrollador web con más de 15 años de experiencia en el desarrollo de aplicaciones web. Conoce sus proyectos y habilidades.">
+	<SectionContainer class="py-44 pb-22">
 		<main>
 			 <img 
 				class="rounded-full w-12 h-12 mb-5"
@@ -26,19 +29,28 @@ import Github from "../icons/Github.astro";
 			</h1>
 			<h2 class="text-1xl opacity-90 text-wrap">Desarrollador Web con <span class="text-yellow-100/90">más de 15 años de experiencia</span> en el desarrollo de aplicaciones. De Venezuela. </h2>
 
-			<ul>
-				<li>
-					<SocialPill>
-						<Linkedin />Linkedin
-					</SocialPill>
-				</li>
-				<li>
-					<SocialPill>
-						<Github />Github
-					</SocialPill>
+			<nav class="flex gap-x-4 mt-6">
+				<SocialPill href="https://www.linkedin.com/in/renansalazar/">
+					<LinkedinIcon class="w-6 h-6"/>Linkedin
+				</SocialPill>
+			
+				<SocialPill href="https://github.com/RenanSalazarDev">
+					<GithubIcon class="w-6 h-6"/>Github
+				</SocialPill>
 
-				</li>
-			</ul>
+				<SocialPill href="https://github.com/RenanSalazarDev">
+					<EmailIcon class="w-6 h-6"/>renan@interconexo.com
+				</SocialPill>
+			</nav>
 		</main>
+		</SectionContainer>
+
+		<SectionContainer>
+			<h2 class="flex flex-row gap-x-2 items-center text-2xl font-semibold mb-6">
+				<BriefinIcon class="w-6 h-6"/>
+				Experiencia Laboral
+			</h2>
+			<Experience/>
+		</SectionContainer>
 	</section>
 </MainLayout>
