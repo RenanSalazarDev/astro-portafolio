@@ -1,0 +1,76 @@
+---
+import ProjectsItem from "./ProjectsItem.astro"
+
+const TAGS = 
+    {
+        NEXT: {
+            name: "Next.js",
+            class: "bg-blue-900 text-blue-300"   
+        },
+        REACT: {
+            name: "React",
+            class: "bg-red-900 text-red-300"
+        },
+        NODE: {
+            name: "Node.js",
+            class: "bg-cyan-900 text-cyan-300"
+        },
+        FLUTTER: {
+            name: "Flutter",
+            class: "bg-purple-900 text-purple-300"
+        },
+        DART: {
+            name: "Dart",
+            class: "bg-yellow-900 text-yellow-300"
+        }, 
+        JAVASCRIPT: {
+            name: "JavaScript",
+            class: "bg-green-900 text-green-300"
+        },
+        EXPRESS: {
+            name: "Express.js",
+            class: "bg-gray-900 text-gray-300"
+        },
+        MONGODB: {
+            name: "MongoDB",
+            class: "bg-orange-900 text-orange-300"
+        }
+    }
+    const PROJECTS = [
+        {
+            title: "Project One",
+            date: "January 2023",   
+            description: "Description of project one. This project involves building a web application using modern technologies.",   
+            link: "#",
+            github: "#",
+            image: "https://placehold.co/600x400",
+            tags: [TAGS.JAVASCRIPT, TAGS.REACT, TAGS.NEXT]
+        },
+        {
+            title: "Project Two",
+            date: "February 2023",   
+            description: "Description of project two. This project focuses on creating a mobile application with a user-friendly interface.",   
+            link: "#",
+            github: "#",
+            image: "https://placehold.co/600x400",
+            tags: [TAGS.FLUTTER, TAGS.DART, TAGS.JAVASCRIPT]
+        },
+        {
+            title: "Project Three",
+            date: "March 2023",   
+            description: "Description of project three. This project is about developing a RESTful API for data management.",   
+            link: "#",
+            github: "#",
+            image: "https://placehold.co/600x400",
+            tags: [TAGS.NODE, TAGS.EXPRESS, TAGS.MONGODB]
+        }
+    ]
+
+---
+
+{
+    PROJECTS.map((item) => (<ProjectsItem item={item} key={item.date}></ProjectsItem>
+       
+    ))}
+
+

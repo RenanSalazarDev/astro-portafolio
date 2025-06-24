@@ -3,7 +3,7 @@
 
 html {
     font-family: 'Onest Variable', sans-serif;
-
+    scroll-behavior: smooth;
 }
 
 body {
@@ -11,8 +11,11 @@ body {
     flex-direction: column;
     height: 100vh;
     background: #050505;
+    
 }
 
-:root{
-    color-scheme: light dark;
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }

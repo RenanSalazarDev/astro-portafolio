@@ -1,0 +1,32 @@
+---
+import Badge from "./Badge.astro";
+
+interface ProjectsItem {
+    date: string;
+    title: string;
+    description: string;
+    image: string;
+    link?: string;
+    tags: { name: string; class: string }[];
+}
+const { item } = Astro.props;
+
+console.log(item);
+---
+ <div class="mb-10">
+    <h3 class="text-lg font-semibold text-yellow-200 dark:text-yellow-200">{item.title}</h3>
+    <time class="mb-1 text-sm font-normal leading-none text-gray-200">{item.date}</time>
+    <img src={item.image} alt="">
+    <p class="mt-2 text-base font-normal text-gray-200 dark:text-gray-200 text-pretty">{item.description}</p>
+    <ul class="mt-2 mb-2">
+    {
+        item.tags.map((tag: { name: string; class: string }) => (
+            <Badge class={`${tag.class}`}>{tag.name}</Badge>
+        ))
+    }
+    </ul>
+    
+    <a href={item.link} class="text-white mt-2 inline-flex items-center px-4 py-2 text-sm font-medium border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700">
+    Ver más</a>
+    
+</div>

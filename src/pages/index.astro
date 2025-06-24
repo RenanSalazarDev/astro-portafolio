@@ -8,11 +8,13 @@ import LinkedinIcon from "../icons/Linkedin.astro";
 import GithubIcon from "../icons/Github.astro";
 import EmailIcon from "../icons/Email.astro";
 import Experience from "../components/Experience.astro";
+import Projets from "../components/Projects.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import BriefinIcon from "../icons/Brief.astro";
+import Projects from "../icons/Projects.astro";
 ---
 
-
+<main class="px-4">
 <MainLayout title="Portafolio de renan Salazar - Desarrollador y Programador web con 15 años de experiancia" description="Contrata a Renan Salazar, un desarrollador web con más de 15 años de experiencia en el desarrollo de aplicaciones web. Conoce sus proyectos y habilidades.">
 	<SectionContainer class="py-44 pb-22">
 		<main>
@@ -21,15 +23,15 @@ import BriefinIcon from "../icons/Brief.astro";
 				src="assets/167711553.webp" 
 				alt="Foto de Renan Salazar"
 			/>
-			<h1 class="text-4xl font-bold flex flex-row gap-x-4 mb-7">
+			<h1 class="text-4xl font-bold flex flex-row gap-x-4 mb-7 text-white">
 				Hey, soy Renan Salazar 
 				<a href="https://www.linkedin.com/in/renansalazar/" class="flex justify-center items-center">
-					<Badge>Disponible para trabajar</Badge>
+					<Badge class="bg-blue-900 text-blue-300">Disponible para trabajar</Badge>
 				</a>
 			</h1>
-			<h2 class="text-1xl opacity-90 text-wrap">Desarrollador Web con <span class="text-yellow-100/90">más de 15 años de experiencia</span> en el desarrollo de aplicaciones. De Venezuela. </h2>
+			<h2 class="text-1xl opacity-90 text-wrap text-white">Desarrollador Web con <span class="text-yellow-100/90">más de 15 años de experiencia</span> en el desarrollo de aplicaciones. De Venezuela. </h2>
 
-			<nav class="flex gap-x-4 mt-6">
+			<nav class="flex gap-x-4 mt-6 gap-y-4 text-white flex-wrap">
 				<SocialPill href="https://www.linkedin.com/in/renansalazar/">
 					<LinkedinIcon class="w-6 h-6"/>Linkedin
 				</SocialPill>
@@ -45,12 +47,21 @@ import BriefinIcon from "../icons/Brief.astro";
 		</main>
 		</SectionContainer>
 
-		<SectionContainer>
-			<h2 class="flex flex-row gap-x-2 items-center text-2xl font-semibold mb-6">
+		<SectionContainer id="expeciencia">
+			<h2 class="text-white flex flex-row gap-x-2 items-center text-2xl font-semibold mb-6">
 				<BriefinIcon class="w-6 h-6"/>
 				Experiencia Laboral
 			</h2>
 			<Experience/>
 		</SectionContainer>
+
+		<SectionContainer id="proyectos">
+			<h2 class="text-white flex flex-row gap-x-2 items-center text-2xl font-semibold mb-6">
+				<Projects class="w-6 h-6"/>
+				Proyectos
+			</h2>
+			<Projets/>
+		</SectionContainer>
 	</section>
 </MainLayout>
+</main>
